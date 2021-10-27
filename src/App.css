@@ -1,38 +1,178 @@
-.App {
-  text-align: center;
+/* snow day=>https://i.pinimg.com/originals/84/55/bc/8455bc57cafc1049fc8eb6d40a240b0a.jpg */
+/*sunny day=>https://w0.peakpx.com/wallpaper/731/231/HD-wallpaper-firewatch-day-nature.jpg*/
+/* rainy day=>https://steamuserimages-a.akamaihd.net/ugc/910167954989352233/A79D6CA50059926DCB0D65A548D8B501CABA8651/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true */
+/* clouds=>https://alaynamcole.com/upload/2uf6o3p.jpg */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 62.5%;
+    background-color: rgb(255, 255, 255);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #353b48;
+    height: 100vh;
+    width: 100vw;
+}
+.appbox{
+height: 90vh;
+width: 25vw;
+/* width: 30vw; for full screen*/
+border-radius: 20px;
+/* background-color: rgb(0, 163, 199); */
+background: url("https://w0.peakpx.com/wallpaper/731/231/HD-wallpaper-firewatch-day-nature.jpg");
+background-size: cover;
+background-repeat: no-repeat;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+transition: 0.4s ease-out;
+border: 5px solid #292929;
+}
+.clouds{
+    background: url("https://data.whicdn.com/images/244417240/original.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+    .rain{
+        background: url("https://64.media.tumblr.com/80626c02ca522a84125574d137f5b412/tumblr_p7tl5u65C21w5k72fo1_1280.gifv");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+    .sunny{
+        background: url("https://i.redd.it/o9cjxms6x4j61.gif");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+    .snow{
+        background: url("https://i.pinimg.com/originals/84/55/bc/8455bc57cafc1049fc8eb6d40a240b0a.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        }
+.search-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+input{
+    border: none;
+    height: 2.5rem;
+    width: 100%;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background-color: rgba(92, 92, 92, 0.356);
+    padding:0rem  2rem;
+    color: rgb(233, 233, 233);
+    font-size: 1.2rem;
+    font-weight: 600;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+}
+.place-date{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5rem;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+}
+.place-date h2{
+    margin-bottom: 10px;
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                 0px -5px 35px rgba(255,255,255,0.3);
+}
+.place-date h3{
+    text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+    0px -5px 35px rgba(255,255,255,0.3); 
+}
+.temp-box{
+    display: flex;
+    height: 10rem;
+    width: 10rem;
+    background-color: rgba(92, 92, 92, 0.356);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    margin-top: -5rem;
+    box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+}
+.temp-box h2{
+    font-size: 2.5rem;
+    color: aliceblue;
+    text-shadow: 1px 4px rgba(0, 0, 0, 0.2) ;
+    margin-bottom: 20px;
+}
+.temp-box h3{
+    font-size: 1.5rem;
+    color: aliceblue;
+    text-shadow:  1px 3px rgba(0, 0, 0, 0.2)  ;
+}
+.footer-box{
+    width: 100%;
+    background-color: rgba(92, 92, 92, 0.356);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.6rem;
+    padding: 10px 20px;
+ 
+  padding: 1rem;
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+    border-bottom-right-radius: 21px;
+border-bottom-left-radius: 21px;
+}
+.footer-box h3{
+color: aliceblue;
+font-size: 0.9rem;
+text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen 
+  and (min-device-width: 360px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .appbox{
+        width: 100%;
+        height: 100%;
+    }
+}@media screen 
+and (device-width: 360px) 
+and (device-height: 640px) 
+and (-webkit-device-pixel-ratio: 2) {
+    .appbox{
+        width: 100%;
+        height: 100%;
+    }
+}
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+    .appbox{
+       width: 26rem;
+       height: 80vh;
+    }
+    .footer-box h3{
+        color: aliceblue;
+        text-align: center;
+        font-size: 1.2rem;
+        }
 }
